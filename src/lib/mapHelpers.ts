@@ -22,6 +22,6 @@ export function buildStaticMapUrl(location: LocationConfig): string {
     }
   }
 
-  // Fallback to placeholder image
-  return `https://via.placeholder.com/${width}x${height}/e5e7eb/6b7280?text=${encodeURIComponent(location.name + " Service Area")}`;
+  // Fallback to local placeholder image
+  return "/images/map-placeholder.jpg";
 }

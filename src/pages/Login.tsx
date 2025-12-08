@@ -160,7 +160,7 @@ const Login = () => {
                   <Input
                     id="email"
                     type="email"
-                    placeholder="you@example.com"
+                    placeholder="you@swindonblockeddrains.co.uk"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
@@ -210,7 +210,7 @@ const Login = () => {
               <Input
                 id="email"
                 type="email"
-                placeholder="you@example.com"
+                placeholder="you@swindonblockeddrains.co.uk"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required

@@ -284,6 +284,63 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- Sub-Service-in-Location Pages (Royal Wootton Bassett) -->
+  <url>
+    <loc>https://swindonblockeddrains.co.uk/location/royal-wootton-bassett/blocked-drains/blocked-toilet</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://swindonblockeddrains.co.uk/location/royal-wootton-bassett/blocked-drains/blocked-sink</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://swindonblockeddrains.co.uk/location/royal-wootton-bassett/blocked-drains/blocked-bath</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://swindonblockeddrains.co.uk/location/royal-wootton-bassett/drain-unblocking/external-drain-unblocking</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://swindonblockeddrains.co.uk/location/royal-wootton-bassett/drain-unblocking/internal-drain-unblocking</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://swindonblockeddrains.co.uk/location/royal-wootton-bassett/cctv-drain-surveys/pre-purchase-survey</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://swindonblockeddrains.co.uk/location/royal-wootton-bassett/cctv-drain-surveys/drainage-investigation</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://swindonblockeddrains.co.uk/location/royal-wootton-bassett/drain-jetting/domestic-jetting</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://swindonblockeddrains.co.uk/location/royal-wootton-bassett/drain-jetting/commercial-jetting</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://swindonblockeddrains.co.uk/location/royal-wootton-bassett/emergency-drain-services/flooding-emergency</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://swindonblockeddrains.co.uk/location/royal-wootton-bassett/emergency-drain-services/sewage-emergency</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
   <!-- Service-in-Location Pages (Highworth) -->
   <url>
     <loc>https://swindonblockeddrains.co.uk/location/highworth/blocked-drains</loc>
@@ -309,6 +366,63 @@
     <loc>https://swindonblockeddrains.co.uk/location/highworth/emergency-drain-services</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+
+  <!-- Sub-Service-in-Location Pages (Highworth) -->
+  <url>
+    <loc>https://swindonblockeddrains.co.uk/location/highworth/blocked-drains/blocked-toilet</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://swindonblockeddrains.co.uk/location/highworth/blocked-drains/blocked-sink</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://swindonblockeddrains.co.uk/location/highworth/blocked-drains/blocked-bath</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://swindonblockeddrains.co.uk/location/highworth/drain-unblocking/external-drain-unblocking</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://swindonblockeddrains.co.uk/location/highworth/drain-unblocking/internal-drain-unblocking</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://swindonblockeddrains.co.uk/location/highworth/cctv-drain-surveys/pre-purchase-survey</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://swindonblockeddrains.co.uk/location/highworth/cctv-drain-surveys/drainage-investigation</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://swindonblockeddrains.co.uk/location/highworth/drain-jetting/domestic-jetting</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://swindonblockeddrains.co.uk/location/highworth/drain-jetting/commercial-jetting</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://swindonblockeddrains.co.uk/location/highworth/emergency-drain-services/flooding-emergency</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://swindonblockeddrains.co.uk/location/highworth/emergency-drain-services/sewage-emergency</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 
   <!-- Service-in-Location Pages (Purton) -->
@@ -338,6 +452,63 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- Sub-Service-in-Location Pages (Purton) -->
+  <url>
+    <loc>https://swindonblockeddrains.co.uk/location/purton/blocked-drains/blocked-toilet</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://swindonblockeddrains.co.uk/location/purton/blocked-drains/blocked-sink</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://swindonblockeddrains.co.uk/location/purton/blocked-drains/blocked-bath</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://swindonblockeddrains.co.uk/location/purton/drain-unblocking/external-drain-unblocking</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://swindonblockeddrains.co.uk/location/purton/drain-unblocking/internal-drain-unblocking</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://swindonblockeddrains.co.uk/location/purton/cctv-drain-surveys/pre-purchase-survey</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://swindonblockeddrains.co.uk/location/purton/cctv-drain-surveys/drainage-investigation</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://swindonblockeddrains.co.uk/location/purton/drain-jetting/domestic-jetting</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://swindonblockeddrains.co.uk/location/purton/drain-jetting/commercial-jetting</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://swindonblockeddrains.co.uk/location/purton/emergency-drain-services/flooding-emergency</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://swindonblockeddrains.co.uk/location/purton/emergency-drain-services/sewage-emergency</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
   <!-- Service-in-Location Pages (Cricklade) -->
   <url>
     <loc>https://swindonblockeddrains.co.uk/location/cricklade/blocked-drains</loc>
@@ -365,6 +536,63 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- Sub-Service-in-Location Pages (Cricklade) -->
+  <url>
+    <loc>https://swindonblockeddrains.co.uk/location/cricklade/blocked-drains/blocked-toilet</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://swindonblockeddrains.co.uk/location/cricklade/blocked-drains/blocked-sink</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://swindonblockeddrains.co.uk/location/cricklade/blocked-drains/blocked-bath</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://swindonblockeddrains.co.uk/location/cricklade/drain-unblocking/external-drain-unblocking</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://swindonblockeddrains.co.uk/location/cricklade/drain-unblocking/internal-drain-unblocking</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://swindonblockeddrains.co.uk/location/cricklade/cctv-drain-surveys/pre-purchase-survey</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://swindonblockeddrains.co.uk/location/cricklade/cctv-drain-surveys/drainage-investigation</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://swindonblockeddrains.co.uk/location/cricklade/drain-jetting/domestic-jetting</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://swindonblockeddrains.co.uk/location/cricklade/drain-jetting/commercial-jetting</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://swindonblockeddrains.co.uk/location/cricklade/emergency-drain-services/flooding-emergency</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://swindonblockeddrains.co.uk/location/cricklade/emergency-drain-services/sewage-emergency</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
   <!-- Service-in-Location Pages (Wroughton) -->
   <url>
     <loc>https://swindonblockeddrains.co.uk/location/wroughton/blocked-drains</loc>
@@ -390,5 +618,62 @@
     <loc>https://swindonblockeddrains.co.uk/location/wroughton/emergency-drain-services</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+
+  <!-- Sub-Service-in-Location Pages (Wroughton) -->
+  <url>
+    <loc>https://swindonblockeddrains.co.uk/location/wroughton/blocked-drains/blocked-toilet</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://swindonblockeddrains.co.uk/location/wroughton/blocked-drains/blocked-sink</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://swindonblockeddrains.co.uk/location/wroughton/blocked-drains/blocked-bath</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://swindonblockeddrains.co.uk/location/wroughton/drain-unblocking/external-drain-unblocking</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://swindonblockeddrains.co.uk/location/wroughton/drain-unblocking/internal-drain-unblocking</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://swindonblockeddrains.co.uk/location/wroughton/cctv-drain-surveys/pre-purchase-survey</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://swindonblockeddrains.co.uk/location/wroughton/cctv-drain-surveys/drainage-investigation</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://swindonblockeddrains.co.uk/location/wroughton/drain-jetting/domestic-jetting</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://swindonblockeddrains.co.uk/location/wroughton/drain-jetting/commercial-jetting</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://swindonblockeddrains.co.uk/location/wroughton/emergency-drain-services/flooding-emergency</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://swindonblockeddrains.co.uk/location/wroughton/emergency-drain-services/sewage-emergency</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>
