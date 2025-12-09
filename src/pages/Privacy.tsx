@@ -1,6 +1,8 @@
 import { Layout } from "@/components/layout/Layout";
 import { SEOHead } from "@/components/seo/SEOHead";
+import { SchemaScript } from "@/components/seo/SchemaScript";
 import { BRAND } from "@/config/brand";
+import { generateWebPageSchema } from "@/lib/schema";
 
 const Privacy = () => {
   return (
@@ -11,6 +13,13 @@ const Privacy = () => {
           description: `Privacy policy for ${BRAND.brandName}. Learn how we collect, use, and protect your personal information.`,
           canonicalUrl: "/privacy",
         }}
+      />
+      <SchemaScript
+        schema={generateWebPageSchema(
+          `Privacy Policy | ${BRAND.brandName}`,
+          `Privacy policy for ${BRAND.brandName}. Learn how we collect, use, and protect your personal information.`,
+          "/privacy"
+        )}
       />
 
       <section className="section-padding">

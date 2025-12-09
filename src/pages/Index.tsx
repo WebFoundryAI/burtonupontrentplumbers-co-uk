@@ -3,7 +3,7 @@ import { Layout } from "@/components/layout/Layout";
 import { HeroWithForm } from "@/components/hero/HeroWithForm";
 import { ServicesGrid } from "@/components/sections/ServicesGrid";
 import { LocationsGrid } from "@/components/sections/LocationsGrid";
-import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
+import { TestimonialsSection, testimonials } from "@/components/sections/TestimonialsSection";
 import { FAQSection } from "@/components/sections/FAQSection";
 import { CTASection } from "@/components/sections/CTASection";
 import { TrustBadges } from "@/components/sections/TrustBadges";
@@ -18,6 +18,8 @@ import { getHomeSEO } from "@/config/seo";
 import {
   generateWebsiteSchema,
   generateLocalBusinessSchema,
+  generateAggregateRatingSchema,
+  generateReviewSchema,
 } from "@/lib/schema";
 import { MapPin, ArrowRight } from "lucide-react";
 
@@ -35,7 +37,12 @@ const Index = () => {
     <Layout>
       <SEOHead metadata={getHomeSEO()} />
       <SchemaScript
-        schema={[generateWebsiteSchema(), generateLocalBusinessSchema()]}
+        schema={[
+          generateWebsiteSchema(),
+          generateLocalBusinessSchema(),
+          generateAggregateRatingSchema(testimonials),
+          ...generateReviewSchema(testimonials),
+        ]}
       />
 
       <HeroWithForm />

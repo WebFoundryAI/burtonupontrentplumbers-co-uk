@@ -1,6 +1,8 @@
 import { Layout } from "@/components/layout/Layout";
 import { SEOHead } from "@/components/seo/SEOHead";
+import { SchemaScript } from "@/components/seo/SchemaScript";
 import { BRAND } from "@/config/brand";
+import { generateWebPageSchema } from "@/lib/schema";
 
 const Cookies = () => {
   return (
@@ -11,6 +13,13 @@ const Cookies = () => {
           description: `Cookie policy for ${BRAND.brandName}. Learn about the cookies we use on our website.`,
           canonicalUrl: "/cookies",
         }}
+      />
+      <SchemaScript
+        schema={generateWebPageSchema(
+          `Cookie Policy | ${BRAND.brandName}`,
+          `Cookie policy for ${BRAND.brandName}. Learn about the cookies we use on our website.`,
+          "/cookies"
+        )}
       />
 
       <section className="section-padding">

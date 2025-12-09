@@ -1,6 +1,8 @@
 import { Layout } from "@/components/layout/Layout";
 import { SEOHead } from "@/components/seo/SEOHead";
+import { SchemaScript } from "@/components/seo/SchemaScript";
 import { BRAND } from "@/config/brand";
+import { generateWebPageSchema } from "@/lib/schema";
 
 const Terms = () => {
   return (
@@ -11,6 +13,13 @@ const Terms = () => {
           description: `Terms and conditions for using ${BRAND.brandName} drainage services.`,
           canonicalUrl: "/terms",
         }}
+      />
+      <SchemaScript
+        schema={generateWebPageSchema(
+          `Terms of Service | ${BRAND.brandName}`,
+          `Terms and conditions for using ${BRAND.brandName} drainage services.`,
+          "/terms"
+        )}
       />
 
       <section className="section-padding">

@@ -123,6 +123,8 @@ export function generateLocalBusinessSchema(
     url: `https://${BRAND.domain}`,
     telephone: BRAND.phone,
     email: BRAND.email,
+    logo: `https://${BRAND.domain}/favicon.png`,
+    image: `https://${BRAND.domain}/og/swindonblockeddrains-og.jpg`,
     address: {
       "@type": "PostalAddress",
       streetAddress: BRAND.addressLine1,
@@ -310,5 +312,115 @@ export function generateBreadcrumbSchema(
       name: item.name,
       item: `https://${BRAND.domain}${item.url}`,
     })),
+  };
+}
+
+export interface Testimonial {
+  name: string;
+  location: string;
+  rating: number;
+  text: string;
+}
+
+export function generateAggregateRatingSchema(
+  testimonials: Testimonial[]
+): SchemaOrgObject {
+  const totalRating = testimonials.reduce((sum, t) => sum + t.rating, 0);
+  const avgRating = totalRating / testimonials.length;
+  
+  return {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": `https://${BRAND.domain}/#localbusiness`,
+    name: BRAND.brandName,
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: avgRating.toFixed(1),
+      bestRating: "5",
+      worstRating: "1",
+      ratingCount: testimonials.length.toString(),
+    },
+  };
+}
+
+export function generateReviewSchema(
+  testimonials: Testimonial[]
+): SchemaOrgObject[] {
+  return testimonials.map((t) => ({
+    "@context": "https://schema.org",
+    "@type": "Review",
+    author: {
+      "@type": "Person",
+      name: t.name,
+    },
+    reviewRating: {
+      "@type": "Rating",
+      ratingValue: t.rating.toString(),
+      bestRating: "5",
+      worstRating: "1",
+    },
+    reviewBody: t.text,
+    itemReviewed: {
+      "@type": "LocalBusiness",
+      "@id": `https://${BRAND.domain}/#localbusiness`,
+      name: BRAND.brandName,
+    },
+  }));
+}
+
+export function generateOrganizationSchema(): SchemaOrgObject {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": `https://${BRAND.domain}/#organization`,
+    name: BRAND.brandName,
+    url: `https://${BRAND.domain}`,
+    logo: `https://${BRAND.domain}/favicon.png`,
+    description: `Professional drainage services across ${BRAND.serviceAreaLabel}. 24/7 emergency drain unblocking, CCTV surveys, and repairs.`,
+    telephone: BRAND.phone,
+    email: BRAND.email,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: BRAND.addressLine1,
+      addressLocality: BRAND.primaryLocation,
+      postalCode: BRAND.postcode,
+      addressCountry: "GB",
+    },
+  };
+}
+
+export function generateContactPageSchema(): SchemaOrgObject {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    name: `Contact ${BRAND.brandName}`,
+    description: `Get in touch with ${BRAND.brandName} for a free quote or emergency callout.`,
+    url: `https://${BRAND.domain}/contact`,
+    mainEntity: {
+      "@type": "LocalBusiness",
+      "@id": `https://${BRAND.domain}/#localbusiness`,
+      name: BRAND.brandName,
+      telephone: BRAND.phone,
+      email: BRAND.email,
+    },
+  };
+}
+
+export function generateWebPageSchema(
+  title: string,
+  description: string,
+  path: string
+): SchemaOrgObject {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: title,
+    description: description,
+    url: `https://${BRAND.domain}${path}`,
+    isPartOf: {
+      "@type": "WebSite",
+      "@id": `https://${BRAND.domain}/#website`,
+      name: BRAND.brandName,
+    },
   };
 }
