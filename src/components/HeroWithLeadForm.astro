@@ -1,0 +1,44 @@
+---
+import LeadForm from './LeadForm.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  bullets?: string[];
+  formId?: string;
+  source?: string;
+}
+
+const {
+  title,
+  description,
+  bullets = ['Fast response across Manchester', 'Fixed pricing with no hidden extras', 'Fully insured drainage engineers', '24/7 emergency availability'],
+  formId = 'hero-lead-form',
+  source = 'hero',
+} = Astro.props;
+---
+
+<section class="section hero">
+  <div class="container grid grid--2 hero__grid">
+    <div>
+      <span class="badge badge--trust">Trusted local drainage specialists</span>
+      <h1>{title}</h1>
+      <p class="hero__intro">{description}</p>
+      <ul class="hero__bullets">
+        {bullets.map((item) => (
+          <li>{item}</li>
+        ))}
+      </ul>
+      <div class="trust-bar">
+        <span>Fast response</span>
+        <span>Fixed pricing</span>
+        <span>Fully insured</span>
+        <span>Local engineers</span>
+      </div>
+    </div>
+
+    <div id="quote-form">
+      <LeadForm formId={formId} source={source} heading="Request your free quote" />
+    </div>
+  </div>
+</section>

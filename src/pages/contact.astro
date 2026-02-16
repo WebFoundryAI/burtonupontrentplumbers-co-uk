@@ -1,214 +1,37 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import LeadForm from '../components/LeadForm.astro';
 import { BRAND } from '../data/brand';
-import { getBreadcrumbSchema, getWebPageSchema, serializeSchema } from '../utils/schema';
+import { getBaseBusinessSchema, getBreadcrumbSchema } from '../utils/schema';
 
-// SEO-optimized title (50-60 chars)
-const title = `Contact Us | Get a Free Quote | ${BRAND.phoneFormatted}`;
+const title = `Contact Blocked Drains Manchester | Call ${BRAND.phoneFormatted}`;
+const description = `Contact ${BRAND.brandName} for emergency and routine drainage services across Greater Manchester. Call ${BRAND.phoneFormatted} or submit a quote request.`;
 
-// SEO-optimized description (120-155 chars) with benefits and CTA
-const description = `Contact ${BRAND.brandName} for a free, no-obligation quote. 24/7 emergency response across Greater Manchester. Call ${BRAND.phoneFormatted} or request a callback.`;
-
-const breadcrumbItems = [
-  { name: "Home", url: "/" },
-  { name: "Contact Us", url: "/contact/" }
+const pageSchema = [
+  getBaseBusinessSchema(),
+  getBreadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'Contact', url: '/contact/' },
+  ]),
 ];
-
-const breadcrumbSchema = getBreadcrumbSchema(breadcrumbItems);
-
-const webPageSchema = getWebPageSchema({
-  url: '/contact/',
-  name: title,
-  description: description,
-  breadcrumb: breadcrumbItems
-});
-
-const combinedPageSchema = [breadcrumbSchema, webPageSchema];
 ---
 
-<BaseLayout title={title} description={description} canonical="/contact/">
-  <!-- Page Schemas (Breadcrumb + WebPage) -->
-  <script type="application/ld+json" set:html={serializeSchema(combinedPageSchema)} />
-  <!-- Hero Section -->
-  <section class="hero-section">
-    <div class="hero-overlay py-16 md:py-20">
-      <div class="container-wide px-4 text-center text-white">
-        <h1 class="text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
-        <p class="text-lg text-white/90 max-w-2xl mx-auto">
-          Get in touch for a free quote or emergency callout
-        </p>
+<BaseLayout title={title} description={description} canonical="/contact/" schema={pageSchema}>
+  <section class="section section--tight bg-white">
+    <div class="container grid grid--2">
+      <div class="card">
+        <h1>Contact our drainage team</h1>
+        <p>Call us for immediate support or send your details and we’ll call back quickly.</p>
+
+        <p><strong>Phone:</strong> <a href={`tel:${BRAND.phone}`}>{BRAND.phoneFormatted}</a></p>
+        <p><strong>Email:</strong> <a href={`mailto:${BRAND.email}`}>{BRAND.email}</a></p>
+        <p><strong>Address:</strong> {BRAND.addressLine1}, {BRAND.addressLine2}, {BRAND.postcode}</p>
+        <p><strong>Hours:</strong> 24/7 emergency response</p>
+      </div>
+
+      <div id="quote-form">
+        <LeadForm formId="contact-lead-form" source="contact-page" heading="Request a free quote" />
       </div>
     </div>
   </section>
-
-  <!-- Main Content -->
-  <section class="section-padding">
-    <div class="container-wide px-4">
-      <div class="grid lg:grid-cols-2 gap-12">
-        <!-- Contact info -->
-        <div>
-          <h2 class="text-2xl font-bold mb-6">Contact Our Drainage Team</h2>
-          <p class="text-muted-foreground mb-8">
-            Whether you need an emergency callout or want to book a routine service, we're here to help. Contact us today for a free, no-obligation quote.
-          </p>
-
-          <div class="space-y-6">
-            <div class="flex items-start gap-4">
-              <div class="p-3 bg-primary/10 rounded-lg">
-                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-primary"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-              </div>
-              <div>
-                <h3 class="font-semibold mb-1">Phone</h3>
-                <a href={`tel:${BRAND.phone}`} class="text-lg text-primary hover:underline">
-                  {BRAND.phoneFormatted}
-                </a>
-                <p class="text-sm text-muted-foreground">Available 24/7 for emergencies</p>
-              </div>
-            </div>
-
-            <div class="flex items-start gap-4">
-              <div class="p-3 bg-primary/10 rounded-lg">
-                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-primary"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
-              </div>
-              <div>
-                <h3 class="font-semibold mb-1">Email</h3>
-                <a href={`mailto:${BRAND.email}`} class="text-lg text-primary hover:underline">
-                  {BRAND.email}
-                </a>
-                <p class="text-sm text-muted-foreground">We'll respond within 24 hours</p>
-              </div>
-            </div>
-
-            <div class="flex items-start gap-4">
-              <div class="p-3 bg-primary/10 rounded-lg">
-                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-primary"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-              </div>
-              <div>
-                <h3 class="font-semibold mb-1">Address</h3>
-                <p>
-                  {BRAND.addressLine1}, {BRAND.addressLine2}<br />
-                  {BRAND.postcode}
-                </p>
-              </div>
-            </div>
-
-            <div class="flex items-start gap-4">
-              <div class="p-3 bg-primary/10 rounded-lg">
-                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-primary"><circle cx="12" cy="12" r="10"></circle><polyline points="12,6 12,12 16,14"></polyline></svg>
-              </div>
-              <div>
-                <h3 class="font-semibold mb-1">Hours</h3>
-                <p>
-                  <strong>Office:</strong> Mon-Fri 8am-6pm<br />
-                  <strong>Emergency:</strong> 24/7
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Contact Form -->
-        <div class="bg-card p-6 md:p-8 rounded-xl card-elevated">
-          <h2 class="text-2xl font-bold mb-2">Request a Free Drainage Quote</h2>
-          <p class="text-muted-foreground mb-6">
-            Call us directly for the fastest response, or fill out the form below.
-          </p>
-
-          <div class="flex flex-col sm:flex-row gap-3 mb-6">
-            <a href={`tel:${BRAND.phone}`} class="btn-primary flex-1 text-center py-3 block">
-              <span class="flex items-center justify-center gap-2">
-                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                Call {BRAND.phoneFormatted}
-              </span>
-            </a>
-            <a href={`mailto:${BRAND.email}`} class="btn-outline flex-1 text-center py-3 block">
-              <span class="flex items-center justify-center gap-2">
-                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
-                Email Us
-              </span>
-            </a>
-          </div>
-
-          <div class="border-t border-border pt-6">
-            <h3 class="font-semibold mb-4">Or send us a message:</h3>
-            <form name="contact-form" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" class="space-y-4" id="contact-form">
-              <input type="hidden" name="form-name" value="contact-form" />
-              <p class="hidden"><label>Don't fill this out: <input name="bot-field" /></label></p>
-
-              <div>
-                <label for="contact-name" class="block text-sm font-medium mb-1">Your Name</label>
-                <input type="text" id="contact-name" name="name" required placeholder="e.g. John Smith" class="w-full px-4 py-3 rounded-lg border border-border bg-background text-sm focus:outline-none focus:ring-2 focus:ring-primary/50" />
-              </div>
-
-              <div class="grid sm:grid-cols-2 gap-4">
-                <div>
-                  <label for="contact-phone" class="block text-sm font-medium mb-1">Phone Number</label>
-                  <input type="tel" id="contact-phone" name="phone" required placeholder="e.g. 07700 900000" class="w-full px-4 py-3 rounded-lg border border-border bg-background text-sm focus:outline-none focus:ring-2 focus:ring-primary/50" />
-                </div>
-                <div>
-                  <label for="contact-email" class="block text-sm font-medium mb-1">Email Address</label>
-                  <input type="email" id="contact-email" name="email" placeholder="e.g. john@example.com" class="w-full px-4 py-3 rounded-lg border border-border bg-background text-sm focus:outline-none focus:ring-2 focus:ring-primary/50" />
-                </div>
-              </div>
-
-              <div>
-                <label for="contact-postcode" class="block text-sm font-medium mb-1">Postcode</label>
-                <input type="text" id="contact-postcode" name="postcode" required placeholder="e.g. M1 1AA" class="w-full px-4 py-3 rounded-lg border border-border bg-background text-sm focus:outline-none focus:ring-2 focus:ring-primary/50" />
-              </div>
-
-              <div>
-                <label for="contact-message" class="block text-sm font-medium mb-1">Describe Your Problem</label>
-                <textarea id="contact-message" name="message" rows="4" placeholder="e.g. Kitchen sink is blocked and water won't drain..." class="w-full px-4 py-3 rounded-lg border border-border bg-background text-sm resize-none focus:outline-none focus:ring-2 focus:ring-primary/50"></textarea>
-              </div>
-
-              <button type="submit" id="contact-submit-btn" class="btn-primary w-full text-center py-3 text-lg">
-                Send Message
-              </button>
-            </form>
-            <div id="contact-form-success" class="hidden text-center py-8">
-              <div class="text-trust text-4xl mb-3">&#10003;</div>
-              <h3 class="text-lg font-bold mb-2">Message Sent!</h3>
-              <p class="text-sm text-muted-foreground">We'll get back to you within 15 minutes during business hours.</p>
-            </div>
-            <div id="contact-form-error" class="hidden text-center py-4">
-              <p class="text-sm text-red-600">Something went wrong. Please call us directly or try again.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <script>
-    const form = document.getElementById('contact-form') as HTMLFormElement | null;
-    const success = document.getElementById('contact-form-success');
-    const error = document.getElementById('contact-form-error');
-    if (form) {
-      form.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        const btn = form.querySelector('button[type="submit"]') as HTMLButtonElement;
-        btn.disabled = true;
-        btn.textContent = 'Sending...';
-        error?.classList.add('hidden');
-
-        try {
-          const response = await fetch('/', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: new URLSearchParams(new FormData(form) as any).toString(),
-          });
-          if (response.ok) {
-            form.classList.add('hidden');
-            success?.classList.remove('hidden');
-          } else {
-            throw new Error('Form submission failed');
-          }
-        } catch {
-          error?.classList.remove('hidden');
-          btn.disabled = false;
-          btn.textContent = 'Send Message';
-        }
-      });
-    }
-  </script>
 </BaseLayout>
