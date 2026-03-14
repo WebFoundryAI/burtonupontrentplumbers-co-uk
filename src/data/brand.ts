@@ -1,8 +1,8 @@
 export const BRAND = {
   brandName: "Burton upon Trent Plumbers",
   domain: "burtonupontrentplumbers.co.uk",
-  primaryLocation: "Manchester",
-  serviceAreaLabel: "Manchester and surrounding areas",
+  primaryLocation: "Burton upon Trent",
+  serviceAreaLabel: "Burton upon Trent and surrounding areas",
   phone: "01283333333",
   phoneFormatted: "01283 333333",
   email: "info@burtonupontrentplumbers.co.uk",
